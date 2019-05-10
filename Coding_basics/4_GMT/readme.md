@@ -11,6 +11,9 @@ This lesson describes the necessary skills in GMT. The truth about GMT is we all
 
 
 ## Project 3: 
-* Make a map of GPS velocities in Northern California. Plot faults. Use color scale for topography. Include km scale bar, velocity scale, topography scale. 
+* Make a map of GPS velocities in Northern California. Plot faults, and add earthquakes. Use color scale for topography. Include km scale bar, velocity scale, topography scale. 
 * When you're done, put a .png of the map into the Github repo's readme to make it look beautiful! 
 
+
+## Project 3: 
+* If that's too easy, make a depth profile of the earthquakes across the San Andreas Fault system in Northern California. 
