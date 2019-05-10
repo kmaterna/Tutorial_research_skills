@@ -14,13 +14,13 @@ This lesson describes the absolute basics necessary for a computing project.
 * We will mostly use Python3 for this project to be safe. 
 * The main differences involve print statements, np.round(), integer division. 
 * Why we are doing this: 
-** Python3 is the way of the future. 
-** Most Python3 code will run in Python2 if necessary. 
+  * Python3 is the way of the future. 
+  * Most Python3 code will run in Python2 if necessary. 
 * https://learntocodewith.me/programming/python/python-2-vs-python-3/#2018-differences-of-python2-vs-3
 
 
 ### Installing Git
-We'll figure out how to do it on each machine. This is IMPORTANT. 
+We'll figure out how to do it on each machine. This is *IMPORTANT*. 
 
 
 ### Get a github account
@@ -35,15 +35,15 @@ We'll figure out how to do it on each machine. This is IMPORTANT.
 * Make a simple plot. 
 * Git add, status, commit
 * gitignore
-** https://git-scm.com/book/en/v1/Git-Basics-Recording-Changes-to-the-Repository
+  * https://git-scm.com/book/en/v1/Git-Basics-Recording-Changes-to-the-Repository
 
 
 ### Github Basics
 * SSH Keys
-** https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account
+  * https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account
 * git clone
 * Github push, pull
-** https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
+  * https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
 
 
 ### Project 0: 
