@@ -30,30 +30,6 @@ Day 5: Where to find papers and how to read them
 
 Linear least squares
 
-
-Project 0a: 
-Saeed: Write a function to read GPS input files and turn them into a named tuple. We will all share this function. 
-Lucy: Write a function to read GPS velocity files and turn them into a named tuple. We will all share this function. 
-Someone: Write a function to read earthquake catalogs into a named tuple.
-Project 0b: 
-Lucy: Write the 'write' function for the GPS input files. We will all share this function. 
-Saeed: Write the 'write' function for the GPS velocity files. We will all share this function. 
-Someone: Write the 'write' function for earthquake catalogs. 
-
-
-Project 1a: 
-Each plot a GPS time series in 3 subplots.
-Project 1b: 
-Each plot a GPS time series in 3 subplots without outliers. 
-Project 1c: 
-Each plot an east-component GPS time series with EQrate per day in twinx. 
-Project 1d: 
-Each plot a histogram of earthquake magnitudes and depths from the catalog. 
-
-Project 2 (can be concurrent): 
-Write a function to remove the earthquake offsets from a time series. 
-Use it in a new version of your plots in Project 1a. 
-
 Project 3: 
 Make a map of GPS velocities in Northern California. Use color scale for topography. Include km scale bar, velocity scale, topography scale. 
 
@@ -66,7 +42,6 @@ Remove the functional fit and plot the residuals.
 
 Project 5: 
 Do Project 4 with weighted least squares. 
-
 
 
 Tips: 

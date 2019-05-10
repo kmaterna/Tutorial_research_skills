@@ -12,9 +12,9 @@ Functions are necessary for writing good code.  In my projects, there are 5 type
 
 
 ### Configure
-* Configure functions are used to point to the appropriate directories for the computation (both input and output). Output directories should be named uniquely to avoid automatically over-writing valuable results. 
+* Configure functions are used to set parameters of the computation. For example, are you removing outliers (and how large?), computing slope, etc. Some of these parameters will be flags (0=False, 1=True), and others will be values. 
 
-* Configure functions are used to set parameters of the computation. For example, are you removing outliers, computing slope, etc. Some of these parameters will be flags (0=False, 1=True), and others will be values. 
+* Configure functions are used to point to input and output directories for the computation, i.e. where the data lives. For complicated experiments, output directories should be given unique names to avoid automatically over-writing valuable results. 
 
 * Configure functions are used to set constants.  What is the domain of the calculation? If doing a mathematical model, what is the elastic modulus, etc.? 
 
@@ -24,15 +24,18 @@ Functions are necessary for writing good code.  In my projects, there are 5 type
 ```
 def configure(station_name):	
 	input_file="../../GPS_POS_DATA/UNR_DATA/"+station_name+".txt"
-	remove_outliers=1; 
+	outliers_definition=10;  # in mm 
 	refframe="NorthAmerican";
 	outdir=refframe+"_"+station_name;
-	return [input_file, remove_outliers, refframe, outdir];
+	return [input_file, outliers_definition, refframe, outdir];
 ```
 
 
 ### Input
-* Input functions bring data from files into data structures in memory.  They should be *clean*, or at least as clean as possible.  Their inputs are file names; their return values are usually arrays. 
+* Input functions bring data from files into data structures in memory.  
+* Input functions should be *clean*, or at least as clean as possible.  
+* Their inputs are usually file names; their return values are usually arrays. 
+* It should be easy to swap out your input files if your data comes in a different format. 
 ```
 def read_inputs(file_name):	
 	[east, north, up] = np.loadtxt(file_name, usecols=(3,4,5),skiprows=20);
@@ -46,17 +49,19 @@ def read_inputs(file_name):
 
 
 ### Compute
-* Compute functions are where the core of your program lives. They may loop over data, do mathematical computations, build models.  
+* Compute functions are where the core of your program lives. They may loop over data, do mathematical computations, build models, or other cool things.  
 
 * Compute functions take arrays of data (in memory) as their inputs. They should not know where the data came from, what format the data came in, or what file it lived in.  
 
+* Compute functions also take in configuration parameters as their inputs. They should not have any hard-coded values (ideally). 
+
 * Compute functions produce outputs that are arrays of data (in memory). They should not write to files. 
 
-* Mathematical compute functions should be as pure and as separate as possible.  This allows the code to be easily fixed if you have a sign error, etc. It is okay to write a mathematical function with one line (it's better than copying the same math over and over, creating the potential for accidental mistakes!).  
+* Mathematical compute functions should be as pure and as separate as possible.  This allows the code to be easily fixed if you have a sign error, etc. 
+  * It is okay to write a mathematical function with one line (it's better than copying the same math over and over, creating the potential for accidental mistakes!).  
 
 * Compute functions should be designed with print statements, to allow the user to understand what the program is doing. These help debug problems when the program breaks. 
-
-* Good things to print: sizes of arrays, status of computation, error messages (divide by zero). 
+  * Good things to print: sizes of arrays, status of computation, error messages (divide by zero). 
 ```
 def second_invariant(exx, exy, eyy):
 	e2nd = exx*eyy - exy*exy;  # An example of a one-line mathematical compute function for strain tensors. 
