@@ -1,0 +1,41 @@
+# How to get data
+
+GPS DATA: 
+GPS Data is downloaded from the UNAVCO Plate Boundary Observatory
+Data exploration: https://www.unavco.org/instrumentation/networks/status/pbo/gps
+FTP site: 
+ftp://data-out.unavco.org/pub/products
+Data download is through using wget from their ftp site (or just copying the text). 
+This example time series: 
+ftp://data-out.unavco.org/pub/products/position/P158/P158.cwu.nam08.pos
+Example downloaded on May 9, 2019. 
+
+GPS VELOCITIES:
+PBO ftp site (try to find it). 
+
+
+EARTHQUAKE CATALOGS:
+The best earthquake catalogs in Northern California come from ncedc.org
+http://ncedc.org/ncedc/catalog-search.html
+You can search for geographic boxes, etc. 
+Always save your search parameters with your dataset. 
+
+
+
+TOPOGRAPHY:
+The best medium-resolution global topography is from ETOPO1. 
+Good idea to download this once, and then refer to it forever. 
+I downloaded a file that was about 900Mb. 
+Misc/Mapping_Resources/Global_topography_data/ETOPO1_Bed_g_gmt4.grd
+And then I refer to it and subsample it for most of my larger-scale mapping needs. 
+The best high-resolution global topography is from SRTM. 
+You can download individual tiles and use them for specific regions. 
+
+
+
+FAULT LINES: 
+There is a USGS catalog of fault lines (holocene, quaternary, etc). 
+I will provide this in GMT and Matlab formats. 
+Every grad student passes this to the next grad student through a flash drive. 
+But I imagine you could find them from USGS as well. 
+
