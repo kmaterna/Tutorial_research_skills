@@ -30,8 +30,6 @@ Day 5: Where to find papers and how to read them
 
 Linear least squares
 
-Project 3: 
-Make a map of GPS velocities in Northern California. Use color scale for topography. Include km scale bar, velocity scale, topography scale. 
 
 Project 4: 
 Read Menke Ch. 1-3

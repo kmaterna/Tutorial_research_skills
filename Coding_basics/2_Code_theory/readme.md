@@ -8,7 +8,7 @@ Functions are necessary for writing good code.  In my projects, there are 5 type
 * Inputs
 * Compute
 * Outputs
-* Driver
+* Drivers
 
 
 ### Configure

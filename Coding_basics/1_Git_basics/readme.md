@@ -33,7 +33,7 @@ We'll figure out how to do it on each machine. This is *IMPORTANT*.
 * git init
 * Write some code to say Hello World, take an array [0:2*np.pi], and print the sines and cosines
 * Make a simple plot. 
-* Git add, status, commit
+* git add, status, commit
 * gitignore
   * https://git-scm.com/book/en/v1/Git-Basics-Recording-Changes-to-the-Repository
 
