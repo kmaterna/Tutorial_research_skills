@@ -47,5 +47,5 @@ We'll figure out how to do it on each machine. This is *IMPORTANT*.
 
 
 ### Project 0: 
-* We will all become collaborators on the same "research basics" github repo
+* We will all become collaborators on the same "Tutorial_research_skills" github repo
 
