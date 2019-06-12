@@ -31,7 +31,7 @@ Se            Standard deviation of dE, meters
 Su            Standard deviation of dU, meters
 Rne           Correlation of dN and dE
 Rnu           Correlation of dN and dU
-Reu           Correlation of dEand dU
+Reu           Correlation of dE and dU
 Soln          "rapid", "final", "suppl/suppf", "campd", or "repro" corresponding to products  generated with rapid or final orbit products, in supplemental processing, campaign data processing or reprocessing
 End Field Description
 *YYYYMMDD HHMMSS JJJJJ.JJJJ         X             Y             Z            Sx        Sy       Sz     Rxy   Rxz    Ryz            NLat         Elong         Height         dN        dE        dU         Sn       Se       Su      Rne    Rnu    Reu  Soln
