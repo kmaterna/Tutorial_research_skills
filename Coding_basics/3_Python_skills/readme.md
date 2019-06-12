@@ -5,6 +5,7 @@ This lesson describes the nitty-gritty details of implementing scientific code i
 
 ### Numpy
 * Matrix math, np.shape, np.size
+* https://www.python-course.eu/matrix_arithmetic.php
 * np.loadtxt
 
 
@@ -24,17 +25,19 @@ This lesson describes the nitty-gritty details of implementing scientific code i
 
 
 ## Projects
+* Project 0:
+  * Using numpy arrays and numpy math, write functions that give you the magnitude of a vector, the dot product of two vectors, and the cross product of two vectors. Test them on vector1=[0.557, 0.557, -0.557]; vector2=[1.114, -1.114, 1.114];
 
 * Project 1a: 
   * Each plot a GPS time series in 3 subplots.
 * Project 1b: 
-  * Each plot a GPS time series in 3 subplots without outliers. 
-* Project 1c: 
   * Each plot an east-component GPS time series with EQrate per day in twinx. 
-* Project 1d: 
+* Project 1c: 
   * Each plot histograms of earthquake magnitudes and depths from the catalog. 
+  * Save plots in a directory on your computer. 
 
-* Project 2 (can be concurrent): 
+* Extra Projects (optional): 
+  * Write a function to remove outliers from a time series, in whichever way you want. 
   * Write a function to remove the earthquake offsets from a time series, in whichever way you want. 
   * Use it in a new version of your plots in Project 1a. 
 
