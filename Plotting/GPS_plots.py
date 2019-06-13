@@ -24,7 +24,7 @@ def year_of_data(yr):
             dU_new.append(dU[i])
     return dates_new, dE_new, dN_new, dU_new
 
-def subplot_it(raw , yr = 0 ): #use this if you want to plot one year of data
+def subplot_it(raw , yr = 0 ):
 
     """ First argument is either 1 or 0. If 1 then raw data will be plotted. If 0 is entered then data
     without outliers will be plotted. Second argument is optional (if you want to enter a year you can,
