@@ -1,8 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import read_GPS as GPS
-import read_velo
-import read_catalog
 
 def remove_outliers_n(data, m=2): # m is the cutoff (multiples of standard deviations)
     dN_new = []
