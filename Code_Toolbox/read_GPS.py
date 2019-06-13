@@ -19,11 +19,8 @@ def input(filename):
 
     dt=[]
     dN=[]
-    Sn=[]
     dE=[]
-    Se=[]
     dU=[]
-    Su=[]
 
     for i in lines_after_37:
         onerow = i
