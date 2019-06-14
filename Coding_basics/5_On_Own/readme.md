@@ -15,6 +15,7 @@ This lesson is all about linear least squares.  The strain project includes a li
 
 ## Project 5: 
 * After that, perform the same experiment using Weighted Least Squares (this is going to be really important for the InSAR project).  You will need to read actual sigma's from the read_GPS function. 
+* Plot the WLS model and the LS model against the data in different colors.  What are the values of the model parameteters?  How different are they?  
 
 
 
