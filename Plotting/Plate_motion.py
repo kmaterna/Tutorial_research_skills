@@ -100,6 +100,6 @@ dE , ignored, before, after, dE_before_mean, dE_after_mean , gaps = shifter(date
 
 ax1 = plt.subplot(311)
 ax1.grid()
-ax1.set(ylabel='East (mm)',title='P158 Raw')
+ax1.set(ylabel='East (mm)',title='P158 Cleaned Up w/out steps')
 ax1.plot_date(dates_clean , dE, fmt='.', tz=None, xdate=True, ydate=False)
 plt.show()
