@@ -2,7 +2,7 @@ import numpy as np
 import collections
 from datetime import datetime
 
-TimeS = collections.namedtuple('TimeS',['name', 'coords', 'dt', 'dN', 'dE', 'dU'])
+TimeS = collections.namedtuple('TimeS',['name', 'coords', 'dt', 'dN', 'dE', 'dU', 'Sn', 'Se', 'Su'])
 
 def input(filename):
     print('Opening ' + str(filename))
@@ -17,10 +17,8 @@ def input(filename):
     ifile.close()
     station_name = x.split()[2]
 
-    dt=[]
-    dN=[]
-    dE=[]
-    dU=[]
+    dt, dN , dE, dU = [], [], [], []
+    Sn, Se, Su = [], [], []
 
     for i in lines_after_37:
         onerow = i
@@ -31,8 +29,12 @@ def input(filename):
         dN.append(float(temp[15])*1000)
         dE.append(float(temp[16])*1000)
         dU.append(float(temp[17])*1000)
+        Sn.append(float(temp[18])*1000)
+        Se.append(float(temp[19])*1000)
+        Su.append(float(temp[20])*1000)
 
-        mystation = TimeS(name=station_name, coords=[Nlat,Elong], dt=dt, dN=dN, dE=dE, dU=dU  )
+
+        mystation = TimeS(name=station_name, coords=[Nlat,Elong], dt=dt, dN=dN, dE=dE, dU=dU, Sn=Sn, Se=Se, Su=Su  )
 
     return mystation
 
