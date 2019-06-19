@@ -58,14 +58,14 @@ dates_clean, dE_new, dates_ignore = data_altered(myCatalog, mytuple, myCatalog.d
 def shifter(dates_ignore, ranger, rangediff, data2, gaplim):
     ignored_divided = np.array_split(dates_ignore, len(dates_ignore)/ranger)
     datesold2 = date_extracter(data2.dt)
-    
+
     dates_after = []
     dates_before = []
     dE_after = []
     dE_before = []
     dE_after_divided_mean = []
     dE_before_divided_mean = []
-    
+
     for array in ignored_divided:
         iday = array[-1]
         for j in range(1, rangediff + 1):
@@ -80,22 +80,22 @@ def shifter(dates_ignore, ranger, rangediff, data2, gaplim):
     for i in range(len(datesold2)):
         if datesold2[i] in dates_before:
             dE_before.append(data2.dE[i])
-    
+
     dE_after_divided = np.array_split(dE_after, len(dE_after)/rangediff)
     dE_before_divided = np.array_split(dE_before, len(dE_after)/rangediff)
-    
+
     for array in dE_after_divided:
         dE_after_divided_mean.append(np.mean(array))
     for array in dE_before_divided:
         dE_before_divided_mean.append(np.mean(array))
-    
+
     gaps = np.array(dE_after_divided_mean) - np.array(dE_before_divided_mean)
     gaps = list(gaps)
     new_gap = []
     for gap in gaps:
         if gap > gaplim:
             new_gap.append(gap)
-    
+
     for i in range(len(ignored_divided)):
         for j in range(len(dates_clean)):
             if (dates_clean[j]) > ignored_divided[i][0] :
@@ -103,9 +103,3 @@ def shifter(dates_ignore, ranger, rangediff, data2, gaplim):
     return  dE_new, ignored_divided, dE_before_divided, dE_after_divided, dE_before_divided_mean, dE_after_divided_mean, new_gap
 
 dE, ignored, before, after, dE_before_mean, dE_after_mean, gaps = shifter(dates_ignore, 8, 10, mytuple ,6)
-
-ax1 = plt.subplot(311)
-ax1.grid()
-ax1.set(ylabel='East (mm)',title='P158 Cleaned Up w/out steps')
-ax1.plot_date(dates_clean , dE, fmt='.', tz=None, xdate=True, ydate=False)
-plt.show()
