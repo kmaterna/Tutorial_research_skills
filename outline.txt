@@ -1,47 +1,40 @@
-
 Skills covered: 
-Day 1: 
-Github, get accounts, gitignore, commit, push, pull (day 1)
-We will all become collaborators on the same "research basics" github repo
-Getting Python
-Python2 vs Python3
-Sample repo as exercises. 
 
-Day 2: 
-Functions
-Configure, input, compute, output, driver
+Topic 1: Getting Python
+Python installation, miniconda
+conda environments, site-packages, numpy/matplotlib/scipy, python2 vs python3
 Import statements, path, pythonpath
+writing your configuration down
+IDEs
+
+Topic 2: Software Design Principles
+Functions vs. Files vs. Libraries
+Separation of data and code
+Configure, input, compute, output, driver
 Lists, arrays, dictionaries, tuples
 	https://thomas-cokelaer.info/tutorials/python/data_structures.html
 Named tuples
-Separation of data and code
-Project 0 as exercises. 
 
-Day 3: 
+Topic 3: Useful Python Libraries
 Datetime
 Np.loadtxt
 Matrix math, np.shape, np.size
 subplots, plot_date, histograms, twinx
-Subprocess
 Project 1 as exercises.
 
-Day 4: GMT plotting
-Day 5: Where to find papers and how to read them
+Topic 4: Git and Github
+Github, get accounts, gitignore, commit, push, pull, PAT, fork, pull request
+We will all become collaborators on the same "research basics" github repo
+Project 2: Earthquake catalogs. Combine forces to construct functions that read, write, plot, histogram, map, filter, and reduce. 
 
-Linear least squares
+Extended topic: GMT
 
-
-Project 4: 
+Big Project: Linear least squares
 Read Menke Ch. 1-3
-Use linear least squares to solve for the best-fitting slopes, seasonal terms, etc. 
+Use linear least squares to solve for the best-fitting slopes, seasonal terms, etc. from GPS time series
 Remove the earthquakes. 
 Plot the results on top of the GPS time series. 
 Remove the functional fit and plot the residuals. 
 
-Project 5: 
-Do Project 4 with weighted least squares. 
-
-
 Tips: 
 Always write down where, when, and how you got your data! 
-
