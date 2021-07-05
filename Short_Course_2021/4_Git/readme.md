@@ -21,7 +21,7 @@ We'll figure out how to do it on each machine. This is *IMPORTANT*.
 
 ### Github Basics
 * Personal Access Tokens vs SSH Keys
-  * https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account
+  * https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
 * ```git clone```
 * Github: ```git push```, ```git pull```
   * https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
