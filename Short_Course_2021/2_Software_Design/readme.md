@@ -128,4 +128,4 @@ Named tuples are wonderful objects!  They are basically containers for user-defi
 * Person 2: Write a function to plot histograms of depth and magnitude of an earthquake catalog
 * Person 3: Write a function to "write" an earthquake catalog into a text file   
 * How do you know that you've made correct functions? 
-* Everyone push your input functions to the Tutorial_research_skills github, and pull everyone else's. 
+* (If we've done Github already) Everyone push your input functions to the Tutorial_research_skills github, and pull everyone else's. 
