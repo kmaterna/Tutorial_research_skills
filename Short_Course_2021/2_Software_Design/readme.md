@@ -14,31 +14,35 @@ This lesson describes the characteristics of clean software.
 5. <ins>Internal data formats</ins> are key to writing good code.  Think about how to get your data from any random source into a consistent internal data format (one that has inputs, outputs, utilities, etc.). 
 
 ## Functions
-Functions are necessary for writing good code.  There are 5 basic types of functions. 
+Functions are necessary for writing good code.  There are a few basic types of functions. 
 * <ins>**config**</ins> - data from files into memory 
 * <ins>**input**</ins> - data from files into memory
 * <ins>**compute**</ins> - memory into memory 
 * <ins>**output**</ins> - memory into files 
 * <ins>**coordinators**</ins> - string it all together
+* <ins>**visualization/post-processing**</ins> - data files into pretty pictures
 
 
 ### Configure
-* Configure functions are used to set parameters of the computation. Some of these parameters will be flags (0=False, 1=True), and others will be values. 
+* Configure functions are used to set parameters of the computation. Sometimes they are used to parse command-line strings into more useful objects for the rest of the software.
 
-* Configure functions are used to point to input and output directories for the computation, i.e. where the data lives. For complicated experiments, output directories should be given unique names to avoid automatically over-writing valuable results. 
+* What is a 'config parameter'? 
 
-* Configure functions are used to set constants.  What is the domain of the calculation? If doing a mathematical model, what is the elastic modulus, etc.? 
+  * Parameters can be strings, numbers, flags (0=False, 1=True), and other values.
+  * Paramaters point to input and output directories for the computation, i.e. where the data lives. For complicated experiments, output directories should be given unique names to avoid automatically over-writing valuable results.
+  * Parameters can be used to set constants.  What is the domain of the calculation? If doing a mathematical model, what is the elastic modulus, etc.?
+  * Parameters can be used to set the types of outputs if that choice exists. Are you making a plot, writing a text file, or both?  Full or abridged outputs?    
 
-* Configure functions are used to set the types of outputs if that choice exists. Are you making a plot, writing a text file, or both?  
+* A config function's return value contains parameters that get used elsewhere in the computation. As the configure functions get more complicated (>8-10 parameters), sometimes it is convenient to store an object of parameter values (a dictionary or named tuple). In that case, the return value is an object.
 
-* The return value contains parameters that get used in many other functions. As the configure functions get more complicated (>8-10 parameters), sometimes it is convenient to return an object of parameter values, instead of a long list. In that case, the return value is an object. 
+* Dictionaries are really nice objects for configure functions
 ```
 def configure(station_name):	
-	input_file="../../GPS_POS_DATA/UNR_DATA/"+station_name+".txt"
-	outliers_definition=10;  # in mm 
-	refframe="NorthAmerican";
-	outdir=refframe+"_"+station_name;
-	return [input_file, outliers_definition, refframe, outdir];
+    config_dict = {'input_file': "../../GPS_POS_DATA/UNR_DATA/"+station_name+".txt", 
+                   'outliers_definition': 10,   # in mm
+                   'refframe': 'NorthAmerican', 
+                   'outdir': 'NorthAmerican_'+station_name} 
+    return config_dict;
 ```
 
 
@@ -95,7 +99,7 @@ def second_invariant(exx, exy, eyy):
 Drivers (or coordinators) orchestrate the rest of the program.  The simplest driver is: 
 ```
 def program_driver():
-	params = configure();
+	params = configure(*command_args);
 	inputs = read_inputs(params);
 	outputs = compute(inputs, params);
 	write_outputs(outputs, params);
@@ -106,7 +110,11 @@ but drivers can also be much longer.
 ## Data Structures
 ### Python Built-in Data Structures
 * Data structures help you accomplish the clean code described above. 
-* Python has: Lists, dictionaries, tuples, Numpy arrays
+* Python has: 
+  * Lists
+  * Dictionaries 
+  * Tuples
+  * Numpy arrays
 * It is important to understand the basic types of data structures in Python.  I use all 4 (arrays, lists, tuples, and dictionaries) quite frequently. 
 * https://thomas-cokelaer.info/tutorials/python/data_structures.html
 
