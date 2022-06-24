@@ -12,16 +12,17 @@ We'll figure out how to do it on each machine. This is *IMPORTANT*.
 * https://github.com/
 * Become friends with me! 
 
-### Git repositories
+### Git repositories: LOCAL MACHINE
 * Make your own sample repository!
 * In the local directory of the repository: ```git init```
 * Write some code to say Hello World with your name on it
 * ```git add, git status, git commit```
 * ```gitignore```
   * https://git-scm.com/book/en/v1/Git-Basics-Recording-Changes-to-the-Repository
+* There are also ways to use Git in a desktop application
 
 
-### Github Basics
+### Github Basics: REMOTE REPO
 * Personal Access Tokens vs SSH Keys
   * https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
 * ```git clone```

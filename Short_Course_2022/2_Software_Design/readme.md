@@ -23,6 +23,62 @@ Functions are necessary for writing good code.  There are a few basic types of f
 * <ins>**visualization/post-processing**</ins> - data files into pretty pictures
 
 
+
+### Schematic for Basic Scientific Program
+```mermaid
+flowchart TD
+  classDef function fill:#580;
+  classDef file fill:#f0;
+  classDef memory fill:#f80
+  subgraph Elements of Software
+  file:::file
+  function:::function
+  memory_object:::memory
+  end  
+```
+
+### Your program: Configure, Input, Compute, Output
+```mermaid
+flowchart TD
+  classDef function fill:#580;
+  classDef file fill:#f0;
+  classDef memory fill:#f80
+  subgraph Configure Function
+  -cmd_line_args-->config_function:::function
+  config_file.txt:::file-->config_function:::function
+  config_function-->params:::memory
+  end
+
+  subgraph Input Functions
+  filename.txt-->input_function:::function
+  input_function-->data_object:::memory
+  end
+  
+  subgraph Compute Functions
+  data_object-->compute_function:::function
+  params-->compute_function:::function
+  compute_function-->output_data_object:::memory  
+  end  
+  
+  subgraph Output Functions
+  output_data_object-->output_function:::function
+  params-->output_function:::function
+  output_function-->text_files.txt:::file
+  output_function-->basic_plots.png:::file
+  output_function-->print_statements:::file 
+  end   
+  
+  subgraph Visualizing Functions
+  text_files.txt-->visualizing_func:::function
+  visualizing_func-->fancy_plots.png:::file
+  end     
+```
+
+* Don't mix one type of function with another (e.g., a combined input-compute function)
+
+
+## Function types in detail
+
 ### Configure
 * Configure functions are used to set parameters of the computation. Sometimes they are used to parse command-line strings into more useful objects for the rest of the software.
 
@@ -104,7 +160,7 @@ def program_driver():
 	outputs = compute(inputs, params);
 	write_outputs(outputs, params);
 ```
-but drivers can also be much longer. 
+but drivers can also be much longer.  Drivers string the other types of functions together in complicated ways, loop over them, etc.
 
 
 ## Data Structures
