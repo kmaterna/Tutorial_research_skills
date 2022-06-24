@@ -1,5 +1,9 @@
 Skills covered: 
 
+Topic 0: Git and Github
+Github, get accounts, gitignore, commit, push, pull, PAT, fork, pull request
+We will all become collaborators on the same "research basics" github repo
+
 Topic 1: Getting Python
 Python installation, miniconda
 conda environments, site-packages, numpy/matplotlib/scipy, python2 vs python3
@@ -22,10 +26,9 @@ Matrix math, np.shape, np.size
 subplots, plot_date, histograms, twinx
 Project 1 as exercises.
 
-Topic 4: Git and Github
-Github, get accounts, gitignore, commit, push, pull, PAT, fork, pull request
-We will all become collaborators on the same "research basics" github repo
+
 Project 2: Earthquake catalogs. Combine forces to construct functions that read, write, plot, histogram, map, filter, and reduce. 
+
 
 Extended topic: GMT
 
