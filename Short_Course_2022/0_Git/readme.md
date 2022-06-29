@@ -32,9 +32,34 @@ We'll figure out how to do it on each machine. This is *IMPORTANT*.
 
 ### Github Advanced Topics
 * Essential for contributing to open-source software projects
-* fork projects, create pull requests 
-* Repository structure: package names, __init__.py, LICENSE.md, README.md, setup.py, test, code... 
-* Repositories do not generally have the code sitting in the first directory
+* Major workflow: fork projects, change code, create pull requests 
+* Repository structure: package names, __init__.py, LICENSE.md, README.md, setup.py, test, code...
+
+```
+├── MY_AWESOME_OPEN_SOURCE_REPO
+     ├── source_code
+         ├── package1
+         |   ├── __init__.py     
+         |   └── codefile1.py     
+         └── package2
+             ├── __init__.py     
+             └── codefile2.py 
+     ├── test  
+         ├── testing_code1.py     
+         └── testing_code2.py  
+     ├── docs                  
+         ├── docs_and_examples   
+         └── ipynbs for tutorials                        
+     ├── LICENSE.md
+     ├── README.md
+     ├── setup.py
+     ├── requirements.txt
+     ├── .gitignore
+     ├── version.txt               
+     └── citation.cff
+```
+* Repositories do not generally have the code sitting in the first directory. That would be like opening the door to a car to find the engine instead of the steering wheel. 
+* Instead, repos often have a common structure that helps make them easier to use (shown above).  
 
 ### Project: 
 * Git pull the "Tutorial_research_skills" github repo onto your local machine
