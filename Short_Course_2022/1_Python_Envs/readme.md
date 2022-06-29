@@ -1,4 +1,4 @@
-# Lesson 1: Python Basics
+# Lesson 1: Python Environment Basics
 
 This lesson describes the absolute necessities for a Python computing project. 
 
@@ -22,13 +22,16 @@ This lesson describes the absolute necessities for a Python computing project.
 conda create --name research python=3.9
 conda activate research
 conda install numpy
-python -m pip install -U matplotlib
+conda install -c conda-forge matplotlib
 conda install scipy
 pip install pandas
 pip install jupyter
 ``` 
 * I advise you write down ALL your python configs in a text file that you keep forever.  You never know when you'll have to nuke your entire Python system and start all over (I've had to do it 2-3x in the last year).  It should be FAST to do that.
     * My own: https://github.com/kmaterna/Computer_Setups/blob/master/Mac_restore_your_python.txt  
+* CONDA vs PIP: These two package managers are similar, but do not have exactly the same list of packages. For example, some specialized packages will be on Pip but not on Conda. 
+* The safest thing to do is only use Conda, or only use Pip.  Sometimes that is not possible.  
+* If they must be mixed to build an environment, call all of your ```conda install``` commands first.  Call all ```pip install``` second.
 * Example configuration on my machine: ```conda env list``` 
 ```bash
 # conda environments:
