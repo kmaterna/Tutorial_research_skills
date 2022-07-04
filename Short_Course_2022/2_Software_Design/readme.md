@@ -15,13 +15,13 @@ This lesson describes the characteristics of clean software.
 
 ## Functions
 Functions are necessary for writing good code.  There are a few basic types of functions. 
-* <ins>**config**</ins> - data from files into memory 
+* <ins>**config**</ins> - data from files into memory
 * <ins>**input**</ins> - data from files into memory
 * <ins>**compute**</ins> - memory into memory 
 * <ins>**output**</ins> - memory into files 
 * <ins>**coordinators**</ins> - string it all together
 * <ins>**visualization/post-processing**</ins> - data files into pretty pictures
-
+* Note: Files are on DISK.  Memory is in RAM. These are **not** the same thing. Memory objects disappear after the execution of the program.  Files stay on your hard drive after the execution of the program. 
 
 
 ### Schematic for Basic Scientific Program
