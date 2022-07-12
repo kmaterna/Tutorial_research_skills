@@ -17,7 +17,7 @@ We'll figure out how to do it on each machine. This is *IMPORTANT*.
 * In the local directory of the repository: ```git init```
 * Write some code to say Hello World with your name on it
 * ```git add, git status, git commit```
-* ```gitignore```
+* ```.gitignore```
   * https://git-scm.com/book/en/v1/Git-Basics-Recording-Changes-to-the-Repository
 * There are also ways to use Git in a desktop application
 
